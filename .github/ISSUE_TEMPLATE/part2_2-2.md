@@ -3,7 +3,7 @@ name: part2_2/2
 about: Suggest an idea for this project
 title: ''
 labels: ''
-assignees: ''
+assignees: JongwonLee123
 
 ---
 
