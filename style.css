@@ -35,14 +35,14 @@ h3{
 
 /*Wider-gamut color part1*/
 h4 {
-    color: color(display-p3 0.5 0.2 0.8); /* Example using a wider-gamut color space */
+    color: #804db3; /* Replaced with a standard hex color */
     /*relative length vh*/
     font-size: 1.6vh;
 }
 
 /*Wider-gamut color part2*/
 ul {
-    color: color-mix(in srgb, red 50%, blue 50%); /* Example mixing colors */
+    color: purple; /* Replaced with a standard color name */
     /*relative length vw*/
     font-size: 1.5vw;
     
