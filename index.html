@@ -5,83 +5,218 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <title>Jongwon Lee Internship Meeting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- <style>
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Font and Background */
         body {
-          background-color: linen;
+            font-family: 'Roboto', sans-serif; /* Third-party font */
+            background-color: linen; /* Background color */
         }
-        
-        h1 {
-          color: maroon;
-          margin-left: 40px;
+
+        /* Text Styling */
+        h1, h2 {
+            text-align: center; /* Center-align text */
         }
-        </style> -->
+
+        /* Attendance List Styling */
+        .attendance-list {
+            display: inline-block; /* Inline-block display */
+            width: 50%; /* Relative unit */
+            margin: 20px auto; /* Short margin syntax */
+            padding: 10px 20px; /* Short padding syntax */
+            border: 2px solid black; /* Border style */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background */
+        }
+
+        /* Agenda List Styling */
+        .agenda-list {
+            display: block; /* Block display */
+            margin: 10px auto; /* Short margin syntax */
+            padding: 15px 25px; /* Short padding syntax */
+            border: 1px dashed blue; /* Dashed border */
+            background-color: #eef; /* Light blue background */
+        }
+
+        /* New Business Section */
+        .new-business {
+            display: inline-block; /* Inline-block display */
+            margin: 15px 30px; /* Short margin syntax */
+            padding: 20px; /* Padding */
+            border: 3px solid green; /* Green border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #e8ffe8; /* Light green background */
+        }
+
+        /* Miscellaneous Section */
+        .miscellaneous {
+            margin: 25px 50px; /* Short margin syntax */
+            padding: 15px 30px; /* Short padding syntax */
+            border: 2px dotted red; /* Dotted border */
+            background-color: #ffe8e8; /* Light red background */
+        }
+
+        .miscellaneous li:hover {
+            color: blue; /* Hover pseudo-class */
+        }
+
+        /* Meeting Pictures Section */
+        .meeting-pictures {
+            display: flex; /* Flexbox layout */
+            justify-content: space-around; /* Space-around alignment */
+            flex-wrap: wrap; /* Wrap items */
+            gap: 10px; /* Gap between items */
+        }
+
+        .meeting-pictures img {
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid; /* Grid layout */
+            grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+            gap: 10px; /* Gap between grid items */
+            margin: 20px; /* Margin */
+        }
+
+        .grid-container div {
+            border: 1px solid black; /* Border */
+            padding: 10px; /* Padding */
+            text-align: center; /* Center-align text */
+        }
+
+        /* ID Selector */
+        #special-item {
+            font-weight: bold; /* Bold text */
+            color: purple; /* Purple color */
+        }
+
+        /* Attribute Selector */
+        [data-highlight="true"] {
+            background-color: yellow; /* Highlighted background */
+        }
+
+        /* Pseudo-class Selector */
+        .grid-container div:hover {
+            background-color: lightblue; /* Hover background */
+            cursor: pointer; /* Pointer cursor */
+        }
+
+        .grid-container div:active {
+            background-color: lightcoral; /* Active background */
+        }
+
+        /* Selector List */
+        h1, h2, h3 {
+            margin-bottom: 10px; /* Bottom margin */
+        }
+
+        /* Descendant Combinator */
+        .meeting-pictures img {
+            border: 2px solid gray; /* Gray border */
+        }
+
+        /* Child Combinator */
+        .grid-container > div {
+            font-size: 14px; /* Font size */
+        }
+
+        /* General sibling combinator */
+        h3 ~ p {
+            color: darkgray; /* Dark gray text */
+        }
+
+        /* Adjacent sibling combinator */
+        h3 + ul {
+            border-top: 2px solid black; /* Top border */
+        }
+
+        /* Combining Two Selectors */
+        ul.attendance-list {
+            list-style-type: square; /* Square bullets */
+        }
+
+        /* New Selector: :has() */
+        .grid-container:has(div:hover) {
+            border: 2px solid orange; /* Orange border */
+        }
+
+        /* Nested Selectors */
+        .nested-example {
+            padding: 10px; /* Padding */
+            border: 1px solid black; /* Border */
+
+            & > p {
+                color: green; /* Green text */
+            }
+
+            & > p:hover {
+                color: red; /* Hover red text */
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .attendance-list, .agenda-list, .new-business {
+                width: 90%; /* Adjust width for tablets */
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Two columns */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Single column */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: darkblue;">SWE Meeting</h1>
-
-    <h2 style="text-align: center; color: darkgreen;">4/21/2025</h2>
+    <h1 style="color: darkblue;">SWE Meeting</h1>
+    <h2 style="color: darkgreen;">4/21/2025</h2>
 
     <h3>Attendance</h3>
-    <ul style="
-        margin-top: 20px; /* Longhand margin */
-        margin-bottom: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding: 10px 20px; /* Shorthand padding */
-        border: 2px solid black; /* Border style */
-        border-radius: 10px; /* Rounded corners */
-        background-color: #f9f9f9;">
+    <ul class="attendance-list">
         <li style="color: darkred;">Jongwon Lee</li>
         <li style="color: darkred;">John Doe</li>
         <li style="color: darkred;">Jane Smith</li>
     </ul>
 
     <h3>Agenda</h3>
-
     <h4>Unfinished Business</h4>
-    <ul style="
-        margin: 10px auto; /* Auto margin for centering */
-        padding-top: 15px; /* Longhand padding */
-        padding-bottom: 15px;
-        padding-left: 25px;
-        padding-right: 25px;
-        border: 1px dashed blue; /* Dashed border */
-        border-width: 2px;
-        background-color: #eef;">
+    <ul class="agenda-list">
         <li style="color: darkblue;">Project Updates</li>
         <li style="color: darkblue;">Code Review</li>
     </ul>
 
     <h4>New Business</h4>
-    <ul style="
-        margin: 15px 30px 15px 30px; /* Shorthand margin */
-        padding: 20px; /* Shorthand padding */
-        border: 3px solid green; /* Solid border */
-        border-radius: 5px;
-        background-color: #e8ffe8;">
+    <ul class="new-business">
         <li style="color: darkgreen;">New Project Proposal</li>
         <li style="color: darkgreen;">Team Building Activity</li>
     </ul>
 
     <h3>Miscellaneous</h3>
-    <ul style="
-        margin-top: 25px; /* Longhand margin */
-        margin-bottom: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding: 15px 30px; /* Shorthand padding */
-        border: 2px dotted red; /* Dotted border */
-        border-color: red;
-        background-color: #ffe8e8;">
+    <ul class="miscellaneous">
         <li style="color: darkred;">Feedback on last meeting</li>
         <li style="color: darkred;">Questions about the new project</li>
     </ul>
 
     <h3>Meeting Pictures</h3>
-    <img src="screenshots/c++.png" alt="C++ Image" width="500" height="300">
-    <img src="screenshots/stock.png" alt="Stock Portfolio" width="500" height="300">
-    <img src="screenshots/swe.jpg" alt="Whiteboard Diagram" width="500" height="300">
+    <div class="meeting-pictures">
+        <img src="screenshots/c++.png" alt="C++ Image" width="500" height="300">
+        <img src="screenshots/stock.png" alt="Stock Portfolio" width="500" height="300">
+        <img src="screenshots/swe.jpg" alt="Whiteboard Diagram" width="500" height="300">
+    </div>
 
     <h3>Audio Recording</h3>
     <audio controls>
@@ -90,10 +225,23 @@
     </audio>
 
     <h3>Video Recording</h3>
-    <video width="320" height="240" controls>
+    <video width="320" height="240" controls></video>
         <source src="30_second_video.mp4" type="video/mp4">
-         Your browser does not support the video element.
+        Your browser does not support the video element.
     </video>  
+
+    <h3>Grid Example</h3>
+    <div class="grid-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+    </div>
+
+    <div class="nested-example">
+        <p>Nested Example Paragraph</p>
+    </div>
 </body>
-      
 </html>
