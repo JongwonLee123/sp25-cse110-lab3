@@ -1,0 +1,48 @@
+/*makes styles more robust and prevent UI from breaking or showing incorrectly*/
+:root{
+    --main-color: #f0ff98; /*light yellow*/
+}
+
+/*apply background color with hex codes*/
+body{
+    background-color: var(--main-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /*absolute length px*/
+    padding: 20px;
+}
+
+/*apply blue rgb to SWE title*/
+h1{
+    color: rgb(31, 15, 173);
+    /*absolute length cm*/
+    padding-top: 1cm;
+}
+
+/*apply red hsl to SWE title*/
+h2{
+    color: hsl(0, 100%, 50%);
+    /*absolute length mm*/
+    padding-bottom: 5mm;
+}
+
+/*color by name*/
+h3{
+    color: orange;
+    /*relative length em*/
+    font-size: 1.2em; 
+}
+
+/*Wider-gamut color part1*/
+h4 {
+    color: color(display-p3 0.5 0.2 0.8); /* Example using a wider-gamut color space */
+    /*relative length vh*/
+    font-size: 1.6vh;
+}
+
+/*Wider-gamut color part2*/
+ul {
+    color: color-mix(in srgb, red 50%, blue 50%); /* Example mixing colors */
+    /*relative length vw*/
+    font-size: 1.5vw;
+}
