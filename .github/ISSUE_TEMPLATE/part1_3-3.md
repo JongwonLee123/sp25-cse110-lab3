@@ -2,7 +2,7 @@
 name: part1_3/3
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: documentation
 assignees: JongwonLee123
 
 ---
